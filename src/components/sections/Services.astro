@@ -3,84 +3,81 @@ import SectionTitle from "../ui/SectionTitle.astro";
 import ServiceCard from "../ui/ServiceCard.astro";
 import Section from "./Section.astro";
 
-import c1 from "../../assets/pics/card-pic1.png";
-import c2 from "../../assets/pics/card-pic2.png";
-import c3 from "../../assets/pics/card-pic3.png";
-import c4 from "../../assets/pics/card-pic4.png";
-import c5 from "../../assets/pics/card-pic5.png";
-import c6 from "../../assets/pics/card-pic6.png";
+// ✅ Define Variant type
+type Variant = "light" | "accent" | "dark";
 
-const cards = [
+// ✅ Define Card type
+interface Card {
+  titleTop: string;
+  titleBottom: string;
+  text: string;
+  link: string;
+  variant: Variant;
+}
+
+// ✅ Type the array (THIS fixes your error)
+const cards: Card[] = [
   {
-    index: 1,
-    titleTop: "Search Engine",
-    titleBottom: "Optimization",
-    img: c1,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Developer and",
+    titleBottom: "API documentation",
+    text: "Clear, well-structured API references that make integration fast and simple.",
+    link: "/services",
+    variant: "light",
   },
   {
-    index: 2,
-    titleTop: "Pay-per-click",
-    titleBottom: "advertising",
-    img: c2,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Software documentation",
+    titleBottom: "and online help",
+    text: "User-friendly documentation for tutorials, manuals, and help centers.",
+    link: "/services",
+    variant: "accent",
   },
   {
-    index: 3,
-    titleTop: "Social Media",
-    titleBottom: "Marketing",
-    img: c3,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Docs-as-code for your",
+    titleBottom: "software documentation",
+    text: "Versioned, scalable documentation workflows aligned with your codebase.",
+    link: "/services",
+    variant: "dark",
   },
   {
-    index: 1,
-    titleTop: "Email",
-    titleBottom: "Marketing",
-    img: c4,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "DITA-XML for",
+    titleBottom: "documentation",
+    text: "Structured content systems for scalable and reusable documentation.",
+    link: "/services",
+    variant: "light",
   },
   {
-    index: 2,
-    titleTop: "Content",
-    titleBottom: "Creation",
-    img: c5,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Developer",
+    titleBottom: "portal setup",
+    text: "Design developer portals that are intuitive and scalable.",
+    link: "/services",
+    variant: "accent",
   },
   {
-    index: 3,
-    titleTop: "Analytics and",
-    titleBottom: "Tracking",
-    img: c6,
-    alt: "SEO",
-    link: "https://google.com",
+    titleTop: "Ongoing",
+    titleBottom: "documentation maintenance",
+    text: "Keep your docs accurate and aligned with every release.",
+    link: "/services",
+    variant: "dark",
   },
 ];
 
 const description =
-  "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include";
+  "Professional developer documentation services that help teams ship faster with clarity.";
 ---
 
 <Section id="services">
-  <div class="mt-[140px] mb-5">
-    <SectionTitle sectionTitle="Services" description={description} />
-    <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
-      {
-        cards.map((card) => (
-          <ServiceCard
-            index={card.index}
-            titleTop={card.titleTop}
-            titleBottom={card.titleBottom}
-            img={card.img}
-            alt={card.alt}
-            link={card.link}
-          />
-        ))
-      }
+  <div class="mt-[120px] mb-10">
+
+    <SectionTitle
+      sectionTitle="Services"
+      description={description}
+    />
+
+    <div class="grid md:grid-cols-2 gap-6 mt-12">
+      {cards.map((card) => (
+        <ServiceCard {...card} />
+      ))}
     </div>
+
   </div>
 </Section>

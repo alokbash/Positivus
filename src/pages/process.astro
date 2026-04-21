@@ -1,0 +1,100 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import SectionTitle from "../components/ui/SectionTitle.astro";
+import Section from "../components/sections/Section.astro";
+
+const description =
+  "We work alongside your team to ship clear, production-ready documentation every sprint.";
+
+const steps = [
+  {
+    title: "Project kickoff and planning",
+    text: "We start with a kickoff to align on scope, backlog, and release goals. A clear communication plan is set early. We also define tools and how documentation will be delivered each sprint."
+  },
+  {
+    title: "Backlog review and task definition",
+    text: "We review the product backlog and audit existing documentation. Gaps and new requirements are identified. Tasks are defined, approved, and aligned with tools, source control, and delivery methods."
+  },
+  {
+    title: "User analysis and doc= structure",
+    text: "We analyze user personas and product usage before writing. A clear structure and table of contents is created. Content is organized into concept, task, and reference types."
+  },
+  {
+    title: "Templates and writing standards",
+    text: "We create templates aligned with your brand and focused on clarity. Writers follow docs-as-code and structured approaches. A style guide ensures consistency in tone, format, and terminology."
+  },
+  {
+    title: "Collaboration and sprint execution",
+    text: "We work as part of your scrum team and join planning sessions. Documentation is created alongside development. Reviews are continuous and tasks are only complete when documentation is ready."
+  },
+  {
+    title: "Review, approval, and publication",
+    text: "We review content, visuals, and links for accuracy and consistency. Documentation is presented during sprint reviews. Once approved, it is published and made available to users."
+  }
+];
+---
+
+<MainLayout title="Our Process | Agiliya" description={description}>
+  <Section id="process" class="py-16 lg:py-24 pb-24 lg:pb-32">
+
+    <!-- Title -->
+    <SectionTitle
+      sectionTitle="Our process"
+      description={description}
+    />
+
+    <!-- Process Flow -->
+    <div class="relative mt-16">
+
+      <!-- Vertical line (mobile) -->
+      <div class="absolute left-4 top-0 bottom-0 w-px bg-gray-200 sm:hidden"></div>
+
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        {steps.map((step, index) => (
+          <div class="relative">
+
+            <!-- Dot (mobile timeline) -->
+            <div class="absolute -left-1.5 top-2 h-3 w-3 rounded-full bg-gray-300 sm:hidden"></div>
+
+            <!-- Card -->
+            <div
+              class={`rounded-2xl border p-6 shadow-sm hover:shadow-lg transition duration-300
+              ${
+                [
+                  "bg-blue-50 border-blue-100",
+                  "bg-purple-50 border-purple-100",
+                  "bg-green-50 border-green-100",
+                  "bg-orange-50 border-orange-100",
+                  "bg-pink-50 border-pink-100",
+                  "bg-indigo-50 border-indigo-100",
+                ][index % 6]
+              }`}
+            >
+
+              <!-- Step -->
+              <div class="text-xs font-medium text-muted mb-3 tracking-wide">
+                STEP {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <!-- Accent -->
+              <div class="h-1 w-10 rounded-full mb-4 bg-current opacity-40"></div>
+
+              <!-- Title -->
+              <h3 class="text-xl font-semibold mb-2">
+                {step.title}
+              </h3>
+
+              <!-- Text -->
+              <p class="text-muted leading-relaxed">
+                {step.text}
+              </p>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    <!-- Spacer before footer -->
+    <div class="h-16 lg:h-16"></div>
+  </Section>
+</MainLayout>

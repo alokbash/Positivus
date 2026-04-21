@@ -1,90 +1,205 @@
 ---
 import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
+import Logo from "../../assets/logo-alt.png";
 import Linkedin from "../../assets/linkedin.svg";
-import Twitter from "../../assets/twitter.svg";
-import ShortForm from "../ui/ShortForm.astro";
-
-const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
-];
-
-const links = [
-  { name: "About us", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Use Cases", href: "#cases" },
-  { name: "Pricing", href: "#Testimonials" },
-  { name: "Blog", href: "#Home" },
-];
 ---
 
-<section class="sm:px-5">
-  <div class="w-full max-w-[1240px] mx-auto">
-    <div class="px-[15px] bg-dark text-gray py-[55px] lg:px-[60px] sm:rounded-t-[45px]">
+<footer class="footer">
+  <div class="container">
+
+    <!-- GRID -->
+    <div class="grid">
+
+      <!-- BRAND -->
       <div>
-        <div class="flex flex-col lg:flex-row gap-7 items-center justify-between">
-          <ul class="flex flex-col sm:flex-row gap-5">
-            {
-              links.map((link) => {
-                return (
-                  <li class="text-center">
-                    <a class="underline" href={link.href}>
-                      {link.name}
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
-          <ul class="flex gap-5">
-            {
-              logos.map((logo) => {
-                return (
-                  <li>
-                    <a href={logo.link} target="_blank">
-                      <picture>
-                        <Image src={logo.src} alt={logo.name} />
-                      </picture>
-                    </a>
-                  </li>
-                );
-              })
-            }
-          </ul>
+        <div class="brand">
+          <Image src={Logo} alt="Agiliya logo" class="logo" />
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
-          <div class="flex text-center lg:text-start flex-col w-full lg:w-[30%]">
-            <h3 class="mb-5 text-center md:text-left text-2xl text-green">Contact us</h3>
-            <div class="flex flex-col justify-between gap-4">
-              <span> Email: examplemail.com </span>
-              <span> Phone: +123 456 789 </span>
-              <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
-              </span>
-            </div>
-          </div>
-          <div class="flex-grow my-10 lg:my-0 lg:ml-12">
-            <ShortForm />
-          </div>
+        <p class="tagline">
+          Documentation services for modern product teams.
+        </p>
+
+        <a href="/contact" class="cta">Partner with us</a>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services">Developer & API documentation</a></li>
+          <li><a href="/services">Software documentation</a></li>
+          <li><a href="/services">Docs-as-code</a></li>
+          <li><a href="/services">Developer portals</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- SUBSCRIBE -->
+      <div>
+        <h4>Subscribe</h4>
+        <p class="newsletter-text">
+          Get insights on documentation and developer experience.
+        </p>
+
+        <div class="newsletter">
+          <a
+            href="https://agiliya.substack.com/"
+            target="_blank"
+            class="subscribe-btn"
+          >
+            Subscribe →
+          </a>
         </div>
       </div>
 
-      <div class="h-[1px] bg-gray mb-5"></div>
-      <div class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0">
-        <span>2024 Positivus - Made With <a class="underline" target="_blank" href="https://astro.build">Astro</a> by 
-          <a class="underline" target="_blank" href="https://manulthanura.com">Manul</a>
-        </span>&nbsp
-        <span>
-          Credits (
-          <a href="https://www.olgaskuja.design/" target="_blank" class="underline">Olga</a>,
-          <a href="https://esteban-vasquez.netlify.app/" target="_blank" class="underline">Esteban</a>)
-          <span> &</span>
-          <a class="underline" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Licence</a>
-        </span>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+      <span>© 2026 Agiliya. Built for engineering teams.</span>
+
+      <div class="socials">
+        <a href="https://linkedin.com" target="_blank">
+          <Image src={Linkedin} alt="LinkedIn" />
+        </a>
       </div>
     </div>
+
   </div>
-</section>
+</footer>
+
+<style>
+  .footer {
+    background-color: #ecfdf5;
+    color: #1f2937;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #d1fae5;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .brand {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .tagline {
+    margin: 10px 0 20px;
+    font-size: 14px;
+    color: #4b5563;
+  }
+
+  .cta {
+    display: inline-block;
+    background: #84cc16;
+    color: #111827;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .cta:hover {
+    background: #65a30d;
+    color: white;
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #111827;
+    /* removed uppercase for sentence case */
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul a {
+    font-size: 14px;
+    color: #374151;
+    text-decoration: none;
+  }
+
+  ul a:hover {
+    color: #84cc16;
+  }
+
+  .newsletter-text {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #4b5563;
+  }
+
+  .newsletter {
+    display: flex;
+    gap: 10px;
+  }
+
+  .subscribe-btn {
+    display: inline-block;
+    background: #84cc16;
+    color: #111827;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .subscribe-btn:hover {
+    background: #65a30d;
+    color: white;
+  }
+
+  .bottom {
+    border-top: 1px solid #d1fae5;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .socials img {
+    width: 18px;
+    opacity: 0.7;
+  }
+
+  .socials img:hover {
+    opacity: 1;
+  }
+</style>

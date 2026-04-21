@@ -1,25 +1,102 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Sponsors from "../components/sections/Sponsors.astro";
-import Services from "../components/sections/Services.astro";
 ---
 
-<MainLayout title="About us">
-	<main class="space-y-20">
-        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-3">
-            <div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
-                <div class="row items-center py-5 md:pb-20 md:pt-10">
-                    <div class="text-center space-y-10">
-                        <h2 class="text-5xl font-medium leading-none md:text-6xl">We Navigate the <br> digital landscape <br> for success</h2>
-                        <p class="mt-6 mb-8  text-xl font-normal leading-7 sm:mb-12">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
-                        <a class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer"  href="https://github.com/manulthanura/Positivus" target="_blank">
-                            <h2 class="text-center text-xl font-normal leading-7">Book a consultation</h2>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<MainLayout title="About us | Agiliya">
+  <main class="space-y-16 md:space-y-20">
+
+    <!-- HERO -->
+    <section class="pt-16 md:pt-20 px-4 max-w-4xl mx-auto text-center">
+      <h1 class="text-4xl md:text-6xl font-semibold leading-tight mb-6">
+        Documentation that drives product adoption
+      </h1>
+
+      <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+        At Agiliya, we help teams turn complex products into clear, scalable documentation.
+        The kind developers actually use and businesses benefit from.
+      </p>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="max-w-5xl mx-auto border-t border-gray-200"></div>
+
+    <!-- WHY SECTION -->
+    <section class="py-12 md:py-16 px-4 max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-4">
+          Why teams choose Agiliya
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          We combine developer focused thinking with a strong focus on business outcomes.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+
+        <!-- CARD 1 -->
+        <div class="p-6 md:p-8 rounded-2xl border border-gray-200 bg-white hover:shadow-md transition-all">
+          <h3 class="text-xl font-semibold mb-3">
+            Built for Agile teams
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            We work with fast moving teams and deliver documentation that evolves with your product and stays relevant.
+          </p>
         </div>
-        <Sponsors />
-        <Services />
-	</main>
+
+        <!-- CARD 2 -->
+        <div class="p-6 md:p-8 rounded-2xl border border-gray-200 bg-white hover:shadow-md transition-all">
+          <h3 class="text-xl font-semibold mb-3">
+            Open communication
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Clear communication builds trust. We stay aligned with your team so nothing gets lost between product and documentation.
+          </p>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="p-6 md:p-8 rounded-2xl border border-gray-200 bg-white hover:shadow-md transition-all">
+          <h3 class="text-xl font-semibold mb-3">
+            Cost effective solutions
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            We focus on high impact improvements so you get better documentation without unnecessary overhead.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA BOX (PREMIUM) -->
+    <section class="py-12 md:py-16 pb-16 md:pb-20 px-4 max-w-4xl mx-auto">
+      <div class="cta-box text-center">
+
+        <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+          Let’s build documentation that works
+        </h2>
+
+        <a
+          href="/contact"
+          class="inline-flex items-center px-8 py-4 bg-green text-dark rounded-2xl hover:bg-dark hover:text-white transition-all font-medium"
+        >
+          Contact us →
+        </a>
+
+      </div>
+    </section>
+
+  </main>
 </MainLayout>
+
+<style>
+  .cta-box {
+    background: linear-gradient(180deg, #f9fafb 0%, #f3f4f6 100%);
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .cta-box:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  }
+</style>

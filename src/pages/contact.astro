@@ -1,0 +1,64 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Contact us | Agiliya">
+  <section class="py-20 px-4 max-w-5xl mx-auto">
+
+    <!-- HEADER -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4">
+        Contact us
+      </h1>
+      <p class="text-lg text-gray-600 max-w-xl mx-auto">
+        Tell us about your documentation needs and we’ll get back to you quickly.
+      </p>
+    </div>
+
+    <!-- HUBSPOT FORM (FULL WIDTH) -->
+    <div class="form-box mb-16">
+
+      <div
+        class="hs-form-frame"
+        data-region="na2"
+        data-form-id="44f832c7-7ab5-4c96-9621-d44c67ce3fb1"
+        data-portal-id="244087794">
+      </div>
+
+    </div>
+
+    <!-- CALENDAR -->
+    <div class="text-center mb-6">
+      <h2 class="text-2xl font-semibold">
+        Or book a call directly
+      </h2>
+    </div>
+
+    <div
+      class="meetings-iframe-container"
+      data-src="https://meetings-na2.hubspot.com/alok-singh1?embed=true">
+    </div>
+
+  </section>
+
+  <!-- HUBSPOT SCRIPTS -->
+  <script is:inline src="https://js-na2.hsforms.net/forms/embed/244087794.js" defer></script>
+  <script src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+
+</MainLayout>
+
+<style>
+  .form-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 32px;
+  }
+
+  .meetings-iframe-container {
+    min-height: 650px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+  }
+</style>

@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-ouamjn2i> <head><head><meta charset="utf-8"><!-- Favicon (PNG) --><link rel="icon" type="image/png" href="/favicon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"><!-- iOS --><link rel="apple-touch-icon" href="/favicon.png"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.1"><title>404</title><meta name="description"><!-- SEO --><link rel="canonical" href="https://www.agiliya.com/404/"><!-- Open Graph --><meta property="og:site_name" content="Site Name"><meta property="og:title" content="404"><meta property="og:description"><meta property="og:url" content="https://www.agiliya.com/404/"><meta property="og:image" content="https://github.com/manulthanura/Positivus/raw/main/public/cover.png"><meta property="og:image:url" content="https://github.com/manulthanura/Positivus/raw/main/public/cover.png"><meta property="og:image:secure_url" content="https://github.com/manulthanura/Positivus/raw/main/public/cover.png"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:image:alt" content="Positivus"><!-- Twitter --><meta name="twitter:title" content="404"><meta name="twitter:description"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://github.com/manulthanura/Positivus/raw/main/public/cover.png"><meta name="twitter:image:alt" content="404"><!-- Using environment domain --><meta name="twitter:domain" content="https://www.agiliya.com"><!-- JSON LD --><script type="application/ld+json">
+      {
+      "@context": "https://schema.org/",
+      "@type": "WebSite",
+      "name": "Positivus",
+      "url": "https://www.agiliya.com"
+      }
+    </script><!-- Preconnect fonts, images... --><link rel="stylesheet" href="/_astro/about.WW_WIbbo.css"></head><!-- Correct way to load --><script type="module">
+      import "../utils/lenis";
+    </script></head> <body class="bg-white font-grotesk" data-astro-cid-ouamjn2i> <main data-astro-cid-ouamjn2i> <div class="mt-20" data-astro-cid-o5wx45wj> <nav class="navbar fixed top-0 left-0 w-full z-50" data-astro-cid-o5wx45wj> <header class="flex flex-col lg:flex-row justify-between items-center py-4 px-6 md:px-32" data-astro-cid-o5wx45wj>  <div class="flex w-full lg:w-auto items-center justify-between" data-astro-cid-o5wx45wj> <!-- LOGO --> <a href="/" class="flex items-center" data-astro-cid-o5wx45wj> <img src="/Logo.png" class="logo" alt="Agiliya logo" data-astro-cid-o5wx45wj> </a> <!-- MOBILE MENU ICON --> <div class="block lg:hidden" data-astro-cid-o5wx45wj> <div id="menu-icon" class="w-8 h-8 cursor-pointer text-black" data-astro-cid-o5wx45wj> <svg id="open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" data-astro-cid-o5wx45wj> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" data-astro-cid-o5wx45wj></path> </svg> <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="hidden" data-astro-cid-o5wx45wj> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" data-astro-cid-o5wx45wj></path> </svg> </div> </div> </div>  <nav id="menu-items" class="hidden w-full lg:flex lg:w-auto lg:mt-0" data-astro-cid-o5wx45wj> <ul class="menu" data-astro-cid-o5wx45wj> <li data-astro-cid-o5wx45wj> <a href="/services" class="nav-link" data-close-menu="true" data-astro-cid-o5wx45wj> Services </a> </li><li data-astro-cid-o5wx45wj> <a href="/process" class="nav-link" data-close-menu="true" data-astro-cid-o5wx45wj> Process </a> </li><li data-astro-cid-o5wx45wj> <a href="/about" class="nav-link" data-close-menu="true" data-astro-cid-o5wx45wj> About us </a> </li><li data-astro-cid-o5wx45wj> <a href="/contact" class="nav-link" data-close-menu="true" data-astro-cid-o5wx45wj> Contact </a> </li> <!-- MOBILE CTA --> <div class="lg:hidden flex justify-center mt-4" data-astro-cid-o5wx45wj> <a href="#" class="cta-mobile" data-close-menu="true" data-astro-cid-o5wx45wj> Book a Call </a> </div> </ul> </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <!-- DESKTOP CTA --> <div class="hidden lg:flex" data-astro-cid-o5wx45wj> <a href="#" class="cta" data-astro-cid-o5wx45wj> Book a Call </a> </div> </header> </nav> </div>  <script>
+  const menuIcon = document.getElementById('menu-icon');
+  const openIcon = document.getElementById('open-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const menuItems = document.getElementById('menu-items');
+  const closeMenuItems = document.querySelectorAll('[data-close-menu="true"]');
+
+  menuIcon.addEventListener('click', () => {
+    menuItems.classList.toggle('hidden');
+    openIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  closeMenuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      menuItems.classList.add('hidden');
+      openIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+</script>  <main class="space-y-20"> <div class="relative flex flex-col-reverse items-center justify-center md:flex-row" id="hero"> <div class="row items-center py-5 md:pb-20 md:pt-10"> <div class="justify-center flex py-5"> <img src="/404.svg" width="50%" alt="Hero"> </div> <div class="text-center space-y-10"> <h2 class="text-2xl font-medium leading-none md:text-4xl">Sorry, we couldn't find the page you were looking for</h2> <a class="px-9 py-5 bg-black hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex" rel="noopener noreferrer" href="./" target="_blank"> <h2 class="text-center text-xl font-normal leading-7">Go Back Home</h2> </a> </div> </div> </div> </main>  <footer class="footer" data-astro-cid-mh6itkc3> <div class="container" data-astro-cid-mh6itkc3> <!-- GRID --> <div class="grid" data-astro-cid-mh6itkc3> <!-- BRAND --> <div data-astro-cid-mh6itkc3> <div class="brand" data-astro-cid-mh6itkc3> <img src="/_astro/logo-alt.kX82T1kL_Z2ctgX5.webp" alt="Agiliya logo" data-astro-cid-mh6itkc3="true" loading="lazy" decoding="async" fetchpriority="auto" width="201" height="56" class="logo"> </div> <p class="tagline" data-astro-cid-mh6itkc3>
+Documentation services for modern product teams.
+</p> <a href="/contact" class="cta" data-astro-cid-mh6itkc3>Partner with us</a> </div> <!-- SERVICES --> <div data-astro-cid-mh6itkc3> <h4 data-astro-cid-mh6itkc3>Services</h4> <ul data-astro-cid-mh6itkc3> <li data-astro-cid-mh6itkc3><a href="/services" data-astro-cid-mh6itkc3>Developer & API documentation</a></li> <li data-astro-cid-mh6itkc3><a href="/services" data-astro-cid-mh6itkc3>Software documentation</a></li> <li data-astro-cid-mh6itkc3><a href="/services" data-astro-cid-mh6itkc3>Docs-as-code</a></li> <li data-astro-cid-mh6itkc3><a href="/services" data-astro-cid-mh6itkc3>Developer portals</a></li> </ul> </div> <!-- COMPANY --> <div data-astro-cid-mh6itkc3> <h4 data-astro-cid-mh6itkc3>Company</h4> <ul data-astro-cid-mh6itkc3> <li data-astro-cid-mh6itkc3><a href="/about" data-astro-cid-mh6itkc3>About us</a></li> <li data-astro-cid-mh6itkc3><a href="/contact" data-astro-cid-mh6itkc3>Contact</a></li> </ul> </div> <!-- SUBSCRIBE --> <div data-astro-cid-mh6itkc3> <h4 data-astro-cid-mh6itkc3>Subscribe</h4> <p class="newsletter-text" data-astro-cid-mh6itkc3>
+Get insights on documentation and developer experience.
+</p> <div class="newsletter" data-astro-cid-mh6itkc3> <a href="https://agiliya.substack.com/" target="_blank" class="subscribe-btn" data-astro-cid-mh6itkc3>
+Subscribe →
+</a> </div> </div> </div> <!-- BOTTOM --> <div class="bottom" data-astro-cid-mh6itkc3> <span data-astro-cid-mh6itkc3>© 2026 Agiliya. Built for engineering teams.</span> <div class="socials" data-astro-cid-mh6itkc3> <a href="https://linkedin.com" target="_blank" data-astro-cid-mh6itkc3> <img src="/_astro/linkedin.DOEK8ivh_PRON4.svg" alt="LinkedIn" data-astro-cid-mh6itkc3="true" loading="lazy" decoding="async" fetchpriority="auto" width="30" height="30"> </a> </div> </div> </div> </footer>  </main> </body></html>
